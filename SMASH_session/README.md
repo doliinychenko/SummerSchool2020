@@ -88,7 +88,7 @@ Go to the docker environment. If you didn't start it yet, start by
 Installing SMASH:
 
 ```
-cd jetscape-docker/JETSCAPE/external_packages
+cd JETSCAPE/external_packages
 ./get_smash.sh
 cd smash/smash_code/build
 make smash
@@ -201,33 +201,33 @@ Prints the list of all SMASH command line options
   Create a `config_SMASH_tutorial_collider.yaml` file with the following contents:
 
   ```
-    Version: 1.8 # minimal SMASH version to use with this config file
+Version: 1.8 # minimal SMASH version to use with this config file
 
-    Logging:
-        default: INFO
+Logging:
+    default: INFO
 
-    General:
-        Modus:          Collider
-        Time_Step_Mode: Fixed
-        Delta_Time:     0.1
-        End_Time:       200.0
-        Randomseed:     -1
-        Nevents:        50
+General:
+    Modus:          Collider
+    Time_Step_Mode: Fixed
+    Delta_Time:     0.1
+    End_Time:       200.0
+    Randomseed:     -1
+    Nevents:        50
 
-    Output:
-        Output_Interval: 10.0
-        Particles:
-            Format:          ["Oscar2013", "Root"]
+Output:
+    Output_Interval: 10.0
+    Particles:
+        Format:          ["Oscar2013", "Root"]
 
-    Modi:
-        Collider:
-            Projectile:
-                Particles: {2212: 79, 2112: 118} #Gold197
-            Target:
-                Particles: {2212: 79, 2112: 118} #Gold197
+Modi:
+    Collider:
+        Projectile:
+            Particles: {2212: 79, 2112: 118} #Gold197
+        Target:
+            Particles: {2212: 79, 2112: 118} #Gold197
 
-            E_Kin: 1.23
-            Fermi_Motion: "frozen"
+        E_Kin: 1.23
+        Fermi_Motion: "frozen"
   ```
 
   This is almost the default configuration, but we have set `Nevents:  50` and added Root output.

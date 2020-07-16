@@ -200,7 +200,7 @@ Prints the list of all SMASH command line options
 
   Create a `config_SMASH_tutorial_collider.yaml` file with the following contents:
 
-  ```
+```
 Version: 1.8 # minimal SMASH version to use with this config file
 
 Logging:
@@ -228,7 +228,7 @@ Modi:
 
         E_Kin: 1.23
         Fermi_Motion: "frozen"
-  ```
+```
 
   This is almost the default configuration, but we have set `Nevents:  50` and added Root output.
   Run smash with this config:
